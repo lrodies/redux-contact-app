@@ -1,7 +1,8 @@
 import * as actionTypes from './actionTypes';
-const initialState = {
-    contacts: []
-}
+// const initialState = {
+//     contacts: []
+// }
+const initialState = {}
 
 export default function contactReducer(state = initialState, action) {
     console.log(action);
@@ -11,11 +12,6 @@ export default function contactReducer(state = initialState, action) {
                 ...state,
                 contacts: [
                     ...state.contacts,
-                    // {
-                    //     fName: action.payload.fName,
-                    //     lName: action.payload.lName,
-                    //     telNum: action.payload.telNum,
-                    // }
                     action.payload
                 ]
             }
@@ -26,6 +22,18 @@ export default function contactReducer(state = initialState, action) {
                 contacts: [
                     ...state.contacts,
                 ]
+            }
+        }
+        case actionTypes.DELETE: {
+            const contactsCopy = [...state.contacts];
+            for (let i = 0; i < contactsCopy.length; i++) {
+                if (contactsCopy[i].telNum === action.payload) {
+                    contactsCopy.splice(i, 1);
+                    break;
+                }
+            }
+            return {
+                contacts: contactsCopy
             }
         }
         default:

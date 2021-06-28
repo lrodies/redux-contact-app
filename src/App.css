@@ -29,33 +29,68 @@
 }
 .card
  {
+ min-width: 250px;
+ width:50vw;
  border: 1px solid blue;
- height: 30px;
+ height: 10vmin;
  /* width: 90vw; */
  padding:0 0 0 1vw;
  margin-left: 5vh;
  margin-left: 5vh;
  border-radius: 5px; 
- /* display:flex;
- justify-content: space-evenly; */
+ display:flex;
+ justify-content: space-evenly;
  }
 
- .leftBox{
-  /* display:flex;
-  align-content: flex-start; */
-  display:inline;
-  float:left;
+
+ .cardInfoDiv{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 70%;
  }
 
  .tel {
-   font-style: italic;
-   margin-left: 5vw;
+   font-style: italic;      
  }
 
  .unstyledList {
   list-style-type: none; /* Remove bullets */
   padding: 3vw; /* Remove padding */
   margin: 1vw; /* Remove margins */
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.listDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.flexTxt{
+  font-size: 3vmin;
+}
+
+.flexTxtSm{
+  font-size: 2vmin;
+}
+
+.delBtn{
+  margin-top: 1vh;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
  

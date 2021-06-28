@@ -13,7 +13,17 @@ const getContacts = (contacts) => {
     }
 }
 
-export default {
-    createContact,
-    getContacts
+const deleteContact = (telNum) => {
+    return {
+        type: actionTypes.DELETE,
+        payload: telNum
+    }
 }
+
+const contactActions = {
+    createContact,
+    getContacts,
+    deleteContact
+}
+
+export default contactActions;
