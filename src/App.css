@@ -27,6 +27,39 @@
 .App-link {
   color: #61dafb;
 }
+.card
+ {
+ border: 1px solid blue;
+ height: 30px;
+ /* width: 90vw; */
+ padding:0 0 0 1vw;
+ margin-left: 5vh;
+ margin-left: 5vh;
+ border-radius: 5px; 
+ /* display:flex;
+ justify-content: space-evenly; */
+ }
+
+ .leftBox{
+  /* display:flex;
+  align-content: flex-start; */
+  display:inline;
+  float:left;
+ }
+
+ .tel {
+   font-style: italic;
+   margin-left: 5vw;
+ }
+
+ .unstyledList {
+  list-style-type: none; /* Remove bullets */
+  padding: 3vw; /* Remove padding */
+  margin: 1vw; /* Remove margins */
+}
+
+ 
+
 
 @keyframes App-logo-spin {
   from {
